@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Matrices</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>the Matrices</h1>
+
+    <div id="info1" class="info"><a href="#" class="clsit">X</a>
+        <h2>store variables</h2>
+        <p>
+            here you can make a matrix and store it in a variables "one latter or two".
+            <br> -options :
+        </p>
+        <ul>
+            <li>just one or two latter</li>
+            <li>you can't use "<b>T1</b>,<b>T2</b>,<b>T3</b>,<b>T4</b>" as vars</li>
+            <li>you can edit an exiting matrix buy write its latter and you will be able to see its coefficient </li>
+            <li>you can store many matrix as you want</li>
+            <li>your variables will be safe even if you close the browser </li>
+        </ul>
+
+    </div>
+    <div class="vvar">
+        <h4>Store your matrix inside a variables<a href="#info1"><i>?</i></a> </h4>
+        <div class="var">
+            <input type="text" placeholder="Var" max="2" maxlength="2" name="varName" id="varName"><span>=</span>
+            <form class="form">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+                <input placeholder="00" type="number" max="99" maxlength="2" name="item">
+            </form>
+            <button onclick="reset()">RESET</button>
+            <button onclick="saveV()">SAVE</button>
+        </div>
+    </div>
+
+    <div id="info2" class="info"><a href="#" class="clsit">X</a>
+        <h2>transformation matrix </h2>
+        <p>
+            just enter value of rotatation,translate... <br> and it will be handled
+        </p>
+        <ul>
+            <li>Rotation only with deg unit</li>
+            <li>the total resulte it will store it in "TM" like var for you can use it easly </li>
+            <li>you can late a lable empty it will have no effect</li>
+            <li>you can use a specific line of transformation by using T1,T2.. depend on its order</li>
+        </ul>
+    </div>
+    <div>
+        <hr id="hr">
+        <h4>Enter the values ​​of the transformation matrix
+            <a href="#info2"><i>?</i></a>
+        </h4>
+        <div class="transform">
+            <span><b>Choose the type :</b></span>
+            <span style="text-align: center;">X</span>
+            <span style="text-align: center;">Y</span>
+            <span style="text-align: center;">Z </span>
+            <select>
+                <option value="">none</option>
+                <option value="Rotation">Rotation :</option>
+                <option value="Translate">Translate :</option>
+                <option value="Shear">Shear :</option>
+                <option value="Scale">Change Of Scale :</option>
+            </select>
+            <input placeholder="00" type="number" max="999" maxlength="3" class="item">
+            <input placeholder="00" type="number" max="999" maxlength="3" class="item">
+            <input placeholder="00" type="number" max="999" maxlength="3" class="item">
+            <select>
+                <option value="">none</option>
+                <option value="Rotation">Rotation :</option>
+                <option value="Translate">Translate :</option>
+                <option value="Shear">Shear :</option>
+                <option value="Scale">Change Of Scale :</option>
+            </select>
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <select>
+                <option value="">none</option>
+                <option value="Rotation">Rotation :</option>
+                <option value="Translate">Translate :</option>
+                <option value="Shear">Shear :</option>
+                <option value="Scale">Change Of Scale :</option>
+            </select>
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <select>
+                <option value="">none</option>
+                <option value="Rotation">Rotation :</option>
+                <option value="Translate">Translate :</option>
+                <option value="Shear">Shear :</option>
+                <option value="Scale">Change Of Scale :</option>
+            </select>
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+            <input placeholder="00" type="number" max="2" maxlength="2" class="item">
+
+            <button onclick="fTM()">SAVE</button>
+        </div>
+    </div>
+    <div id="info3" class="info"><a href="#" class="clsit">X</a>
+        <h1>third</h1>
+        <p></p>
+    </div>
+    <div>
+        <hr class="hr">
+        <h4>the transformation matrix
+            <!-- <a href="#info3"><i>?</i></a> -->
+        </h4>
+        <div class="tmatrix">
+            <h3>T<sub>M</sub> </h3>
+            <div class="Rmatrix">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+                <input readonly class="TM">
+            </div>
+            <input type="text" id="nthw" readonly>
+        </div>
+
+    </div>
+    <div id="info4" class="info"><a href="#" class="clsit">X</a>
+        <h1>fourth</h1>
+        <p></p>
+    </div>
+    <div>
+        <hr class="hr">
+        <h4>Enter the calculation
+            <!-- <a href="#info4"><i>?</i></a> -->
+        </h4>
+        <form class="opr">
+            <input type="text" maxlength="2"><span>x</span><input type="text" maxlength="2">
+            <button type="submit">=</button><input type="text" maxlength="2">
+        </form>
+        <div class="Rmatrix2">
+
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+            <input readonly name="itemF">
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

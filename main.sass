@@ -1,0 +1,408 @@
+\:root
+  --bgr:#23272a
+  --drk:#1c1b29
+  --ldrk:#292841
+  --blue:#404eed
+  --lblue:#5865f2
+  --gray:#99aab5
+  --ceil:#45aaf7
+  --lceil:#45aaf7
+  --pinky:#de3a93
+  --yellow:#ffc619
+  --lyellow:#ffe75c
+  --dgreen:#15ad75
+  --green:#29cc7a
+
+h1
+  white-space: nowrap
+  top: -15px
+  font-size: 45px
+  text-align: center
+  color: white
+
+body
+  display: -ms-grid
+  display: grid
+  padding-top: 100px
+  flex-flow: row wrap
+  font-family: sans-serif
+  background-color: var(--bgr)
+  margin: 0
+
+  .var
+    min-width: 290px
+    position: relative
+    padding: 0 40px 75px 10px
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+
+  > div > span, div > .var > span
+    font-size: 35px
+    margin-left: -24px
+    color: var(--lblue)
+
+  #varName
+    width: 50px
+    height: 30px
+    border-radius: 8px
+    font-size: 22px
+    text-align: center
+    border: none
+
+  .form
+    row-gap: 5px
+    -moz-column-gap: 5px
+    column-gap: 5px
+    position: relative
+    display: -ms-grid
+    display: grid
+    grid: (repeat(4, 30px) / 40px) repeat(3, 40px)
+
+    &::after
+      font-size: 90px
+      position: absolute
+      top: 50%
+      right: calc(100% - 5px)
+      transform: translateY(-50%) scaleY(2)
+      content: "("
+      font-weight: 300
+      color: var(--gray)
+
+    &::before
+      font-size: 90px
+      position: absolute
+      top: 50%
+      left: calc(100% - 5px)
+      transform: translateY(-50%) scaleY(2)
+      content: ")"
+      font-weight: 300
+      color: var(--gray)
+
+  > div >
+    hr
+      width: 80%
+      margin: 70px auto 5px
+      border: 1px var(--blue) solid
+      opacity: 0.5
+      border-radius: 50%
+
+    h4
+      position: relative
+      color: var(--yellow)
+      text-align: center
+      margin-top: 10px
+      margin-bottom: 25px
+
+      > a
+        top: 100%
+        position: absolute
+        right: 5px
+        font-style: normal
+        border: 2px #eee solid
+        border-radius: 50%
+        color: white
+        width: 18px
+        height: 18px
+        text-decoration: none
+        cursor: pointer
+
+@media (min-width: 450px)
+  body .var
+    justify-content: space-evenly !important
+
+@media (min-width: 720px)
+  body
+    -ms-grid-columns: 1fr [2]
+    grid-template-columns: repeat(2, 1fr)
+    row-gap: 30px
+
+    > div
+      border: var(--blue) 2px solid
+      border-bottom: none
+      border-top: none
+      padding: 0 !important
+      border-collapse: collapse
+
+    .tmatrix
+      padding: 75px 10px 0 !important
+      margin: auto
+
+    #hr
+      display: none
+
+    .hr
+      margin-top: 0 !important
+      margin-bottom: 20px !important
+
+h1, .transform button, .var button
+  transform: translateX(-50%)
+  left: 50%
+  position: absolute
+
+.transform button, .var button
+  bottom: 0px
+  cursor: pointer
+  width: 60px
+  padding: 8px 2px
+  border-radius: 10px
+  font-size: 18px
+  font-weight: 700
+  background-color: var(--blue)
+  color: white
+  border: none
+
+.transform button:hover, .var button:hover
+  filter: saturate(2)
+
+input
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+.transform
+  row-gap: 15px
+  -moz-column-gap: 0px
+  column-gap: 0px
+  position: relative
+  display: -ms-grid
+  display: grid
+  grid: (repeat(5, 40px) / 190px) repeat(3, 50px)
+  padding: 0 0px 70px 0px
+  justify-content: space-around
+  margin: auto
+
+  span
+    color: var(--yellow)
+    font-weight: 500
+    line-height: 40px
+
+  input:focus-visible
+    outline: 3px solid var(--lyellow)
+
+.tmatrix
+  position: relative
+  -moz-column-gap: 10px
+  column-gap: 10px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-evenly
+  align-items: center
+
+  > h3
+    color: var(--dgreen)
+    font-size: 30px
+    position: relative
+
+    &::after
+      content: "="
+      position: absolute
+      top: 50%
+      left: 100%
+      transform: translateY(-50%)
+
+  .Rmatrix
+    row-gap: 5px
+    -moz-column-gap: 5px
+    column-gap: 5px
+    position: relative
+    display: -ms-grid
+    display: grid
+    grid: (repeat(4, 30px) / 40px) repeat(3, 40px)
+
+    &::after
+      font-size: 90px
+      position: absolute
+      top: 50%
+      right: calc(100% - 5px)
+      transform: translateY(-50%) scaleY(2)
+      content: "("
+      font-weight: 300
+      color: var(--gray)
+
+    &::before
+      font-size: 90px
+      position: absolute
+      top: 50%
+      left: calc(100% - 5px)
+      transform: translateY(-50%) scaleY(2)
+      content: ")"
+      font-weight: 300
+      color: var(--gray)
+
+input
+  border-radius: 8px
+  font-size: 18px
+  text-align: center
+  border: none
+
+.opr
+  padding: 0 10px
+  flex-flow: row nowrap
+  display: flex
+  justify-content: center
+  align-items: center
+  -moz-column-gap: 10px
+  column-gap: 10px
+
+  button
+    background-color: var(--dgreen)
+    color: white
+    cursor: pointer
+    width: 40px
+    padding: 5px
+    border-radius: 10px
+    font-size: 18px
+    font-weight: 700
+    color: white
+    border: none
+
+    &:hover
+      filter: saturate(2)
+
+  input
+    width: 40px
+    height: 30px
+
+  > span
+    font-size: 30px
+    color: var(--lceil)
+
+.Rmatrix2
+  position: relative
+  margin: 40px 0px 130px
+  justify-content: center
+  row-gap: 5px
+  -moz-column-gap: 5px
+  column-gap: 5px
+  position: relative
+  display: -ms-grid
+  display: grid
+  grid: (repeat(4, 30px) / 40px) repeat(3, 40px)
+
+  &::after
+    font-size: 90px
+    position: absolute
+    top: 50%
+    right: calc(100% - 5px)
+    transform: translateY(-50%) scaleY(2)
+    content: "("
+    font-weight: 300
+    color: var(--gray)
+    right: calc(50% + 87.5px)
+
+  &::before
+    font-size: 90px
+    position: absolute
+    top: 50%
+    left: calc(100% - 5px)
+    transform: translateY(-50%) scaleY(2)
+    content: ")"
+    font-weight: 300
+    color: var(--gray)
+    left: calc(50% + 87.5px)
+
+select
+  background-color: var(--bgr)
+  border: var(--yellow) outset 2px
+  border-radius: 9px
+  color: var(--lblue)
+  font-weight: 600
+  font-size: 20px
+  text-align: center
+  cursor: pointer
+
+input
+  -moz-appearance: textfield
+
+.var [onclick="reset()"]
+  background-color: var(--lceil)
+  transform: translateX(calc(-50% + 80px))
+
+.opr
+  display: flex
+  justify-content: center
+  align-items: center
+
+body >
+  .info
+    -webkit-animation: fadein 1s ease-out forwards
+    animation: fadein 1s ease-out forwards
+    opacity: 0
+    box-sizing: border-box
+    box-shadow: rgba(0, 0, 0, 0.768627451) 0px 0px 0px 9100px
+    display: none
+    width: 66%
+    height: 70%
+    position: fixed
+    background-color: #e8e8e8
+    z-index: 3
+    border-radius: 15px
+    right: 50%
+    top: 50%
+    transform: translate(50%, -50%)
+
+    h2
+      text-align: center
+      margin-top: 40px
+
+    p
+      padding: 0px 20px
+      line-height: 1.5
+
+    ul
+      line-height: 1.5
+
+      li
+        margin: 15px 0
+
+    .clsit
+      position: absolute
+      left: 15px
+      top: 12px
+      color: grey
+      cursor: pointer
+      font-size: 21px
+      text-decoration: none
+      border-radius: 50%
+      border: grey 2px solid
+      width: 25px
+      height: 25px
+      text-align: center
+
+      &:hover
+        color: black
+        border-color: black
+
+  div > h4 > a:hover
+    color: grey
+    border-color: grey
+
+#info1:target, #info2:target, #info3:target, #info4:target
+  display: block
+
+@-webkit-keyframes fadein
+  to
+    opacity: 1
+
+@keyframes fadein
+  to
+    opacity: 1
+
+#nthw
+  position: absolute
+  bottom: -55px
+  left: 50%
+  transform: translateX(-50%)
+  width: -webkit-fit-content
+  width: -moz-fit-content
+  width: fit-content
+  display: none
+
+.vvar
+  display: flex
+  flex-flow: column
+  justify-content: space-around
+
+/*# sourceMappingURL=main.css.map
